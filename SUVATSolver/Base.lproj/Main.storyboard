@@ -3,7 +3,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11517.1"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -45,9 +44,6 @@
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.51065231980000003" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" name="Intro" family="Intro " pointSize="21"/>
                                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
-                                                <connections>
-                                                    <outlet property="delegate" destination="5bV-g5-fnM" id="Zeh-Y6-Ysj"/>
-                                                </connections>
                                             </textField>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="textbox" translatesAutoresizingMaskIntoConstraints="NO" id="laO-Bs-vC7">
                                                 <constraints>
@@ -59,9 +55,6 @@
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.51065231980000003" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" name="Intro" family="Intro " pointSize="21"/>
                                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
-                                                <connections>
-                                                    <outlet property="delegate" destination="5bV-g5-fnM" id="E7U-k4-1b6"/>
-                                                </connections>
                                             </textField>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="textbox" translatesAutoresizingMaskIntoConstraints="NO" id="Dep-ht-BSr">
                                                 <constraints>
@@ -73,9 +66,6 @@
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.51065231980000003" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" name="Intro" family="Intro " pointSize="21"/>
                                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
-                                                <connections>
-                                                    <outlet property="delegate" destination="5bV-g5-fnM" id="D0k-tA-MgT"/>
-                                                </connections>
                                             </textField>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="textbox" translatesAutoresizingMaskIntoConstraints="NO" id="oeX-R4-BiF">
                                                 <constraints>
@@ -87,9 +77,6 @@
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.51065231980000003" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" name="Intro" family="Intro " pointSize="21"/>
                                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
-                                                <connections>
-                                                    <outlet property="delegate" destination="5bV-g5-fnM" id="0n3-cs-6kF"/>
-                                                </connections>
                                             </textField>
                                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="eaQ-jM-3ja">
                                                 <constraints>
@@ -105,7 +92,6 @@
                                                 <color key="tintColor" red="0.45938720199999999" green="0.76212895940000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 <connections>
                                                     <action selector="controlTapped:" destination="7k0-G4-j8b" eventType="valueChanged" id="QmT-TW-Mgg"/>
-                                                    <action selector="segmentedControl:" destination="BYZ-38-t0r" eventType="valueChanged" id="xIO-Dm-rB6"/>
                                                 </connections>
                                             </segmentedControl>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FILL IN THREE OF THE FIELDS." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nde-lr-vcM">
@@ -227,369 +213,6 @@
                 </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="-1063.2" y="189.3553223388306"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
-            <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SUVATSolver" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="backgroundx1" translatesAutoresizingMaskIntoConstraints="NO" id="eT7-bz-isZ"/>
-                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Eg4-BI-Hup" userLabel="Final Velocity">
-                                <frame key="frameInset" height="529"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                                <connections>
-                                    <segue destination="IwN-8t-lqX" kind="embed" id="HgW-1M-UIT"/>
-                                </connections>
-                            </containerView>
-                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QCt-X9-Daq" userLabel="Initial Velocity">
-                                <frame key="frameInset" height="529"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                                <connections>
-                                    <segue destination="m9C-XX-pth" kind="embed" id="bja-ZG-6Kw"/>
-                                </connections>
-                            </containerView>
-                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XB9-r6-MSG" userLabel="Displacement">
-                                <frame key="frameInset" height="529"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                                <connections>
-                                    <segue destination="5bV-g5-fnM" kind="embed" id="Z86-5T-Oum"/>
-                                </connections>
-                            </containerView>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="0mb-Tg-V5X">
-                                <frame key="frameInset" minX="16" minY="84" width="343" height="29"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <segments>
-                                    <segment title="S"/>
-                                    <segment title="U"/>
-                                    <segment title="V"/>
-                                    <segment title="A"/>
-                                    <segment title="T"/>
-                                </segments>
-                                <color key="tintColor" red="0.45938720199326155" green="0.76212895941841841" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <connections>
-                                    <action selector="segmentedControl:" destination="BYZ-38-t0r" eventType="valueChanged" id="7VL-hl-xBN"/>
-                                </connections>
-                            </segmentedControl>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logox1" translatesAutoresizingMaskIntoConstraints="NO" id="yyr-HM-fKh">
-                                <frame key="frameInset" minX="37" minY="36" width="300" height="40"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                        </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="eT7-bz-isZ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="5d1-2f-l4m"/>
-                            <constraint firstItem="eT7-bz-isZ" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="8qz-0P-ZbB"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="eT7-bz-isZ" secondAttribute="bottom" id="Awm-5x-KEG"/>
-                            <constraint firstAttribute="trailing" secondItem="eT7-bz-isZ" secondAttribute="trailing" id="e8V-UZ-ZlR"/>
-                        </constraints>
-                    </view>
-                    <connections>
-                        <outlet property="control" destination="0mb-Tg-V5X" id="jiu-NO-Irk"/>
-                        <outlet property="displacement" destination="XB9-r6-MSG" id="RwO-9r-ki5"/>
-                        <outlet property="finalVelocity" destination="Eg4-BI-Hup" id="FJ0-R1-yay"/>
-                        <outlet property="initialVelocity" destination="QCt-X9-Daq" id="a89-1x-EW7"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="117.59999999999999" y="122.78860569715144"/>
-        </scene>
-        <!--DisplacementVC-->
-        <scene sceneID="Zxq-vx-Npr">
-            <objects>
-                <viewController id="5bV-g5-fnM" customClass="DisplacementVC" customModule="SUVATSolver" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="PYW-Xi-Kp8"/>
-                        <viewControllerLayoutGuide type="bottom" id="Sjg-G4-ukh"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="6Hn-gB-yDx">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="529"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FILL IN THREE OF THE FIELDS." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tD8-Rl-g5R">
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="16" id="2We-yt-oDx"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Intro" family="Intro " pointSize="16"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Acceleration" textAlignment="center" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="LRI-yy-TTl">
-                                <frame key="frameInset" minX="66" minY="98" width="232" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" name="Intro" family="Intro " pointSize="17"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <outlet property="delegate" destination="5bV-g5-fnM" id="Ptz-pN-b6h"/>
-                                </connections>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Initial Velocity" textAlignment="center" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="5ME-Ry-pYz">
-                                <frame key="frameInset" minX="66" minY="136" width="232" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" name="Intro" family="Intro " pointSize="17"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <outlet property="delegate" destination="5bV-g5-fnM" id="Ytq-0N-tAZ"/>
-                                </connections>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Final Velocity" textAlignment="center" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="EIm-T2-2lP">
-                                <frame key="frameInset" minX="66" minY="174" width="232" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" name="Intro" family="Intro " pointSize="17"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <outlet property="delegate" destination="5bV-g5-fnM" id="jvO-LI-VEh"/>
-                                </connections>
-                            </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Displacement:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xvz-e4-UJX">
-                                <frame key="frameInset" minX="26" minY="293" width="323" height="32"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Intro" family="Intro " pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.50333109662576692" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="calculatex1" translatesAutoresizingMaskIntoConstraints="NO" id="PGm-YZ-QKW">
-                                <frame key="frameInset" minX="67" minY="223" width="240" height="47"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <gestureRecognizers/>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="GeD-oZ-9Bq" appends="YES" id="wm8-6w-HBo"/>
-                                </connections>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="textbox" translatesAutoresizingMaskIntoConstraints="NO" id="X32-pW-4KJ">
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="X32-pW-4KJ" secondAttribute="height" multiplier="303:61" id="EGH-tu-JQ6"/>
-                                </constraints>
-                            </imageView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" placeholder="Time" textAlignment="center" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="eKg-kW-Knb">
-                                <frame key="frameInset" minX="57" minY="63" width="260" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="calibratedRGB"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" name="Intro" family="Intro " pointSize="21"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <outlet property="delegate" destination="5bV-g5-fnM" id="Lk9-o1-ycv"/>
-                                </connections>
-                            </textField>
-                        </subviews>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="tD8-Rl-g5R" firstAttribute="centerX" secondItem="6Hn-gB-yDx" secondAttribute="centerX" id="3j8-6W-vgw"/>
-                            <constraint firstItem="X32-pW-4KJ" firstAttribute="top" secondItem="tD8-Rl-g5R" secondAttribute="bottom" constant="13" id="MON-HH-8hy"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="X32-pW-4KJ" secondAttribute="trailing" constant="20" id="YWq-cT-AcW"/>
-                            <constraint firstItem="X32-pW-4KJ" firstAttribute="leading" secondItem="6Hn-gB-yDx" secondAttribute="leadingMargin" constant="20" id="aDu-31-BFU"/>
-                            <constraint firstItem="tD8-Rl-g5R" firstAttribute="top" secondItem="PYW-Xi-Kp8" secondAttribute="bottom" constant="20" id="dwS-57-25e"/>
-                        </constraints>
-                    </view>
-                    <connections>
-                        <outlet property="accelerationTextField" destination="LRI-yy-TTl" id="bro-cK-Zbb"/>
-                        <outlet property="answerLabel" destination="xvz-e4-UJX" id="MNk-eM-MQf"/>
-                        <outlet property="finalVTextField" destination="EIm-T2-2lP" id="G8D-Wx-HnR"/>
-                        <outlet property="initialVTextField" destination="5ME-Ry-pYz" id="B2c-Gb-5gC"/>
-                        <outlet property="timeTextField" destination="eKg-kW-Knb" id="n5r-Oa-Vkf"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Tcp-Mk-ZA7" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="GeD-oZ-9Bq">
-                    <connections>
-                        <action selector="calculateBtnPressed:" destination="5bV-g5-fnM" id="rIj-QM-FZk"/>
-                        <outlet property="delegate" destination="5bV-g5-fnM" id="uKS-7x-4yb"/>
-                    </connections>
-                </tapGestureRecognizer>
-            </objects>
-            <point key="canvasLocation" x="1104.8" y="-110.19490254872565"/>
-        </scene>
-        <!--Initial VelocityVC-->
-        <scene sceneID="zBk-Uo-O3h">
-            <objects>
-                <viewController id="m9C-XX-pth" customClass="InitialVelocityVC" customModule="SUVATSolver" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="FeH-hC-sEG"/>
-                        <viewControllerLayoutGuide type="bottom" id="hJs-83-nYo"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="I09-YO-e89">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="529"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bmN-0U-3Zm">
-                                <frame key="frameInset" minX="118" minY="237" width="128" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Calculate"/>
-                                <connections>
-                                    <action selector="calculateBtnPressed:" destination="m9C-XX-pth" eventType="touchUpInside" id="y5d-zH-RcL"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Fill in three of the fields below." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CKD-1Z-XZP">
-                                <frame key="frameInset" minX="62" minY="45" width="240" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Time" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="U6n-Ta-zkB">
-                                <frame key="frameInset" minX="66" minY="85" width="232" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <outlet property="delegate" destination="m9C-XX-pth" id="5Ep-bA-bSS"/>
-                                </connections>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Acceleration" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZgS-H5-dpV">
-                                <frame key="frameInset" minX="66" minY="123" width="232" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <outlet property="delegate" destination="m9C-XX-pth" id="5wy-6p-bx5"/>
-                                </connections>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Displacement" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Lzx-3k-agf">
-                                <frame key="frameInset" minX="66" minY="161" width="232" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <outlet property="delegate" destination="m9C-XX-pth" id="wrv-eX-yby"/>
-                                </connections>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Final Velocity" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8Gs-M7-NSJ">
-                                <frame key="frameInset" minX="66" minY="199" width="232" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <outlet property="delegate" destination="m9C-XX-pth" id="VrP-VF-VCJ"/>
-                                </connections>
-                            </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Initial Velocity:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wc1-hh-fQ0">
-                                <frame key="frameInset" minX="36" minY="289" width="323" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                    </view>
-                    <connections>
-                        <outlet property="accelerationTextField" destination="ZgS-H5-dpV" id="aBp-5F-9di"/>
-                        <outlet property="answerLabel" destination="wc1-hh-fQ0" id="Pv7-dr-AqI"/>
-                        <outlet property="displacementTextField" destination="Lzx-3k-agf" id="CTF-QE-J3C"/>
-                        <outlet property="finalVTextField" destination="8Gs-M7-NSJ" id="1eJ-5D-LYU"/>
-                        <outlet property="timeTextField" destination="U6n-Ta-zkB" id="KDj-Eb-hol"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="2Mn-Tu-Ikc" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1105" y="476"/>
-        </scene>
-        <!--Final VelocityVC-->
-        <scene sceneID="hP0-bo-8Ka">
-            <objects>
-                <viewController id="IwN-8t-lqX" customClass="FinalVelocityVC" customModule="SUVATSolver" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="K8l-w7-YK2"/>
-                        <viewControllerLayoutGuide type="bottom" id="OaO-TX-Apr"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="j04-Ss-Ri9">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="529"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fek-8M-WME">
-                                <frame key="frameInset" minX="118" minY="237" width="128" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Calculate"/>
-                                <connections>
-                                    <action selector="calculateBtnPressed:" destination="IwN-8t-lqX" eventType="touchUpInside" id="gnt-zZ-SMs"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Fill in three of the fields below." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B89-fJ-c1R">
-                                <frame key="frameInset" minX="62" minY="45" width="240" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Time" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ybf-3x-Nu3">
-                                <frame key="frameInset" minX="66" minY="85" width="232" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <outlet property="delegate" destination="IwN-8t-lqX" id="nY6-0j-eQ7"/>
-                                </connections>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Acceleration" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ay4-SV-o0a">
-                                <frame key="frameInset" minX="66" minY="123" width="232" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <outlet property="delegate" destination="IwN-8t-lqX" id="DNc-fd-G3c"/>
-                                </connections>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Displacement" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tbf-K5-esJ">
-                                <frame key="frameInset" minX="66" minY="161" width="232" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <outlet property="delegate" destination="IwN-8t-lqX" id="A3c-lB-ueb"/>
-                                </connections>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Initial Velocity" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TzG-wY-Snz">
-                                <frame key="frameInset" minX="66" minY="199" width="232" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <outlet property="delegate" destination="IwN-8t-lqX" id="pQd-J8-e07"/>
-                                </connections>
-                            </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Final Velocity:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GUZ-M3-paK">
-                                <frame key="frameInset" minX="36" minY="289" width="323" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                    </view>
-                    <connections>
-                        <outlet property="accelerationTextField" destination="Ay4-SV-o0a" id="efK-71-ZlC"/>
-                        <outlet property="answerLabel" destination="GUZ-M3-paK" id="vkI-xt-qc0"/>
-                        <outlet property="displacementTextField" destination="tbf-K5-esJ" id="IMb-uj-viw"/>
-                        <outlet property="initialVTextField" destination="TzG-wY-Snz" id="xVp-tx-NKA"/>
-                        <outlet property="timeTextField" destination="Ybf-3x-Nu3" id="aQC-3h-h3F"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="yXY-af-cqs" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="118" y="822"/>
         </scene>
     </scenes>
     <resources>
