@@ -19,14 +19,90 @@ class HomeVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        var accessoryView1 = UIView.init(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.size.width, height: 40))
+        accessoryView1.backgroundColor = UIColor.white
+        var minusBtn1: UIButton = UIButton.init(frame: CGRect(x: 0, y: 5, width: UIScreen.main.bounds.size.width, height: 30))
+        minusBtn1.setTitleColor(UIColor.black, for: UIControlState.normal)
+        minusBtn1.setTitle("-", for: UIControlState.normal)
+        minusBtn1.addTarget(self, action: #selector(HomeVC.minusNumber1), for: UIControlEvents.touchUpInside)
+        accessoryView1.addSubview(minusBtn1)
+        accessoryView1.layer.borderWidth = 1
+        accessoryView1.layer.borderColor = UIColor.lightGray.cgColor
+        self.box1.inputAccessoryView = accessoryView1
+        
+        var accessoryView3 = UIView.init(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.size.width, height: 40))
+        accessoryView3.backgroundColor = UIColor.white
+        var minusBtn3: UIButton = UIButton.init(frame: CGRect(x: 0, y: 5, width: UIScreen.main.bounds.size.width, height: 30))
+        minusBtn3.setTitleColor(UIColor.black, for: UIControlState.normal)
+        minusBtn3.setTitle("-", for: UIControlState.normal)
+        minusBtn3.addTarget(self, action: #selector(HomeVC.minusNumber3), for: UIControlEvents.touchUpInside)
+        accessoryView3.addSubview(minusBtn3)
+        accessoryView3.layer.borderWidth = 1
+        accessoryView3.layer.borderColor = UIColor.lightGray.cgColor
+        self.box3.inputAccessoryView = accessoryView3
+        
+        var accessoryView2 = UIView.init(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.size.width, height: 40))
+        accessoryView2.backgroundColor = UIColor.white
+        var minusBtn2: UIButton = UIButton.init(frame: CGRect(x: 0, y: 5, width: UIScreen.main.bounds.size.width, height: 30))
+        minusBtn2.setTitleColor(UIColor.black, for: UIControlState.normal)
+        minusBtn2.setTitle("-", for: UIControlState.normal)
+        minusBtn2.addTarget(self, action: #selector(HomeVC.minusNumber2), for: UIControlEvents.touchUpInside)
+        accessoryView2.addSubview(minusBtn2)
+        accessoryView2.layer.borderWidth = 1
+        accessoryView2.layer.borderColor = UIColor.lightGray.cgColor
+        self.box2.inputAccessoryView = accessoryView2
+        
+        var accessoryView4 = UIView.init(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.size.width, height: 40))
+        accessoryView4.backgroundColor = UIColor.white
+        var minusBtn4: UIButton = UIButton.init(frame: CGRect(x: 0, y: 5, width: UIScreen.main.bounds.size.width, height: 30))
+        minusBtn4.setTitleColor(UIColor.black, for: UIControlState.normal)
+        minusBtn4.setTitle("-", for: UIControlState.normal)
+        minusBtn4.addTarget(self, action: #selector(HomeVC.minusNumber4), for: UIControlEvents.touchUpInside)
+        accessoryView4.addSubview(minusBtn4)
+        accessoryView4.layer.borderWidth = 1
+        accessoryView4.layer.borderColor = UIColor.lightGray.cgColor
+        self.box4.inputAccessoryView = accessoryView4
 
         // Do any additional setup after loading the view.
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+
+    func minusNumber1() {
+
+        if (self.box1.text?.hasPrefix("-"))! {
+            self.box1.text = box1.text?.replacingOccurrences(of: "-", with: "")
+        } else {
+            self.box1.text = "-\(self.box1.text!)"
+        }
     }
+    
+    func minusNumber2() {
+        
+        if (self.box2.text?.hasPrefix("-"))! {
+            self.box2.text = box2.text?.replacingOccurrences(of: "-", with: "")
+        } else {
+            self.box2.text = "-\(self.box2.text!)"
+        }
+    }
+    
+    func minusNumber3() {
+        
+        if (self.box3.text?.hasPrefix("-"))! {
+            self.box3.text = box3.text?.replacingOccurrences(of: "-", with: "")
+        } else {
+            self.box3.text = "-\(self.box3.text!)"
+        }
+    }
+    
+    func minusNumber4() {
+        
+        if (self.box4.text?.hasPrefix("-"))! {
+            self.box4.text = box4.text?.replacingOccurrences(of: "-", with: "")
+        } else {
+            self.box4.text = "-\(self.box4.text!)"
+        }
+    }
+    
 
     
     @IBAction func calculateTapped(_ sender: AnyObject) {
@@ -171,7 +247,166 @@ class HomeVC: UIViewController {
                 return
             }
         }
+        else if control.selectedSegmentIndex == 3 {
+            let time: String? = box1.text
+            let finalV: String? = box4.text
+            let displacement: String? = box2.text
+            let initialV: String? = box3.text
+            if finalV != nil && finalV != "" && time != nil && time != "" && initialV != nil && initialV != "" && displacement != nil && displacement != ""{
+                answerLabel.text = "Only fill three fields..."
+                self.view.endEditing(true)
+                return
+            }
+            //ASUV
+            if displacement != nil && displacement != "" && finalV != nil && finalV != "" && initialV != nil && initialV != "" {
+                let calculation1: Float = ((Float(finalV!)! * Float(finalV!)!) - (Float(initialV!)! * Float(initialV!)!)) / (2 * Float(displacement!)!)
+                answerLabel.text = String("Acceleration: \(calculation1) m/s2")
+                self.view.endEditing(true)
+                return
+            }
+            //ASUT
+            if displacement != nil && displacement != "" && time != nil && time != "" && initialV != nil && initialV != "" {
+                let calculation1: Float = (Float(displacement!)! - (Float(initialV!)! * Float(time!)!)) / (0.5 * (Float(time!)! * Float(time!)!))
+                answerLabel.text = String("Acceleration: \(calculation1) m/s2")
+                self.view.endEditing(true)
+                return
+            }
+            //ASVT
+            if displacement != nil && displacement != "" && time != nil && time != "" && finalV != nil && finalV != "" {
+                let calculation1: Float = (Float(displacement!)! - (Float(finalV!)! * Float(time!)!)) / (-0.5 * (Float(time!)! * Float(time!)!))
+                answerLabel.text = String("Acceleration: \(calculation1) m/s2")
+                self.view.endEditing(true)
+                return
+            }
+            //ATUV
+            if initialV != nil && initialV != "" && time != nil && time != "" && finalV != nil && finalV != "" {
+                let calculation1: Float = (Float(finalV!)! - Float(initialV!)!) / Float(time!)!
+                answerLabel.text = String("Acceleration: \(calculation1) m/s2")
+                self.view.endEditing(true)
+                return
+            }
+            else {
+                answerLabel.text = "Please fill three fields."
+                return
+            }
+        }
+        else if control.selectedSegmentIndex == 4 {
+            let acceleration: String? = box1.text
+            let finalV: String? = box4.text
+            let displacement: String? = box2.text
+            let initialV: String? = box3.text
+            if finalV != nil && finalV != "" && acceleration != nil && acceleration != "" && initialV != nil && initialV != "" && displacement != nil && displacement != ""{
+                answerLabel.text = "Only fill three fields..."
+                self.view.endEditing(true)
+                return
+            }
+            //TSUV
+            if displacement != nil && displacement != "" && finalV != nil && finalV != "" && initialV != nil && initialV != "" {
+                let calculation1: Float = (Float(displacement!)! * 2) / (Float(initialV!)! + Float(finalV!)!)
+                if calculation1 >= 0 {
+                answerLabel.text = String("Time: \(calculation1) seconds")
+                } else {
+                answerLabel.text = String("No real solutions...")
+                }
+                self.view.endEditing(true)
+                return
+            }
+            //TUVA
+            if acceleration != nil && acceleration != "" && finalV != nil && finalV != "" && initialV != nil && initialV != "" {
+                let calculation1: Float = (Float(finalV!)! - Float(initialV!)!) / Float(acceleration!)!
+                if calculation1 >= 0 {
+                    answerLabel.text = String("Time: \(calculation1) seconds")
+                } else {
+                    answerLabel.text = String("No real solutions...")
+                }
+                self.view.endEditing(true)
+                return
+            }
+            //TSUA
+            if displacement != nil && displacement != "" && acceleration != nil && acceleration != "" && initialV != nil && initialV != "" {
+                let a: Float = 0.5 * Float(acceleration!)!
+                let b: Float = Float(initialV!)!
+                let c: Float = Float(displacement!)! * -1
+                let discriminant: Float = (b * b) - (4 * a * c)
+                if discriminant < 0 {
+                    answerLabel.text = "No real solutions..."
+                    self.view.endEditing(true)
+                    return
+                }
+                let answer1: Float = ((b * -1) + (sqrtf(discriminant))) / (2 * a)
+                let answer2: Float = ((b * -1) - (sqrtf(discriminant))) / (2 * a)
+                
+                if answer1 >= 0 && answer2 >= 0 {
+                    answerLabel.text = "Time: \(answer1) or \(answer2) seconds"
+                    self.view.endEditing(true)
+                    return
+                }
+                if answer1 >= 0 && answer2 < 0 {
+                    answerLabel.text = "Time: \(answer1) seconds"
+                    self.view.endEditing(true)
+                    return
+                }
+                if answer2 >= 0 && answer1 < 0 {
+                    answerLabel.text = "Time: \(answer2) seconds"
+                    self.view.endEditing(true)
+                    return
+                }
+                if answer2 < 0 && answer1 < 0 {
+                    answerLabel.text = "No real solutions..."
+                    self.view.endEditing(true)
+                    return
+                }
+                
+                self.view.endEditing(true)
+                return
+            }
+            //TSVA
+            if displacement != nil && displacement != "" && acceleration != nil && acceleration != "" && finalV != nil && finalV != "" {
+                let a: Float = 0.5 * Float(acceleration!)!
+                let b: Float = Float(initialV!)! * -1
+                let c: Float = Float(displacement!)!
+                let discriminant: Float = (b * b) - (4 * a * c)
+                if discriminant < 0 {
+                    answerLabel.text = "No real solutions..."
+                    self.view.endEditing(true)
+                    return
+                }
+                let answer1: Float = ((b * -1) + (sqrtf(discriminant))) / (2 * a)
+                let answer2: Float = ((b * -1) - (sqrtf(discriminant))) / (2 * a)
+                
+                if answer1 >= 0 && answer2 >= 0 {
+                    answerLabel.text = "Time: \(answer1) or \(answer2) seconds"
+                    self.view.endEditing(true)
+                    return
+                }
+                if answer1 >= 0 && answer2 < 0 {
+                    answerLabel.text = "Time: \(answer1) seconds"
+                    self.view.endEditing(true)
+                    return
+                }
+                if answer2 >= 0 && answer1 < 0 {
+                    answerLabel.text = "Time: \(answer2) seconds"
+                    self.view.endEditing(true)
+                    return
+                }
+                if answer2 < 0 && answer1 < 0 {
+                    answerLabel.text = "No real solutions..."
+                    self.view.endEditing(true)
+                    return
+                }
+                
+                self.view.endEditing(true)
+                return
+            }
+                
+            else {
+                answerLabel.text = "Please fill three fields."
+                return
+            }
+        }
+        
     }
+    
     @IBAction func tappedBackground(_ sender: AnyObject) {
         view.endEditing(true)
     }
@@ -238,3 +473,4 @@ class HomeVC: UIViewController {
     */
 
 }
+

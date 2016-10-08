@@ -58,7 +58,7 @@
                                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="calibratedRGB"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.51065231980000003" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" name="Intro" family="Intro " pointSize="21"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                                                 <connections>
                                                     <outlet property="delegate" destination="5bV-g5-fnM" id="E7U-k4-1b6"/>
                                                 </connections>
@@ -72,7 +72,7 @@
                                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="calibratedRGB"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.51065231980000003" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" name="Intro" family="Intro " pointSize="21"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                                                 <connections>
                                                     <outlet property="delegate" destination="5bV-g5-fnM" id="D0k-tA-MgT"/>
                                                 </connections>
@@ -86,7 +86,7 @@
                                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="calibratedRGB"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.51065231980000003" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" name="Intro" family="Intro " pointSize="21"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                                                 <connections>
                                                     <outlet property="delegate" destination="5bV-g5-fnM" id="0n3-cs-6kF"/>
                                                 </connections>
