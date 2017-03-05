@@ -217,7 +217,7 @@ class HomeVC: UIViewController {
             //VUSA
             if displacement != nil && displacement != "" && acceleration != nil && acceleration != "" && initialV != nil && initialV != "" {
                 let calculation1: Float = (Float(initialV!)! * Float(initialV!)!) + (2 * Float(acceleration!)! * Float(displacement!)!)
-                answerLabel.text = String("Final Velocity: \(calculation1) m/s")
+                answerLabel.text = String("Final Velocity: \(sqrtf(calculation1)) m/s")
                 self.view.endEditing(true)
                 return
             }
@@ -291,9 +291,9 @@ class HomeVC: UIViewController {
             }
         }
         else if control.selectedSegmentIndex == 4 {
-            let acceleration: String? = box1.text
+            let displacement: String? = box1.text
             let finalV: String? = box4.text
-            let displacement: String? = box2.text
+            let acceleration: String? = box2.text
             let initialV: String? = box3.text
             if finalV != nil && finalV != "" && acceleration != nil && acceleration != "" && initialV != nil && initialV != "" && displacement != nil && displacement != ""{
                 answerLabel.text = "Only fill three fields..."
@@ -324,9 +324,17 @@ class HomeVC: UIViewController {
             }
             //TSUA
             if displacement != nil && displacement != "" && acceleration != nil && acceleration != "" && initialV != nil && initialV != "" {
+                /*print(displacement!)
+                print(acceleration!)
+                print(initialV!)
+                */
                 let a: Float = 0.5 * Float(acceleration!)!
                 let b: Float = Float(initialV!)!
                 let c: Float = Float(displacement!)! * -1
+            /*    print(a)
+                print(b)
+                print(c)
+ */
                 let discriminant: Float = (b * b) - (4 * a * c)
                 if discriminant < 0 {
                     answerLabel.text = "No real solutions..."
@@ -363,7 +371,7 @@ class HomeVC: UIViewController {
             //TSVA
             if displacement != nil && displacement != "" && acceleration != nil && acceleration != "" && finalV != nil && finalV != "" {
                 let a: Float = 0.5 * Float(acceleration!)!
-                let b: Float = Float(initialV!)! * -1
+                let b: Float = Float(finalV!)! * -1
                 let c: Float = Float(displacement!)!
                 let discriminant: Float = (b * b) - (4 * a * c)
                 if discriminant < 0 {
